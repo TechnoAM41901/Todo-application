@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "task": "Learn Express",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "task": "Study Node.js",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "task": "Write documentation",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "task": "Create a project",
+    "completed": true
+  },
+  {
+    "id": 5,
+    "task": "new task",
+    "completed": false
+  },
+  {
+    "id": 6,
+    "task": "Multer for file uploading and downloading",
+    "completed": true
+  },
+  {
+    "id": 7,
+    "task": "Create a project",
+    "completed": false
+  },
+  {
+    "id": 8,
+    "task": "Body-parse and static file serving",
+    "completed": false
+  },
+  {
+    "id": 9,
+    "task": "task10",
+    "completed": false
+  }
+]

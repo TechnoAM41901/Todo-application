@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title To-Do List
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")  // jQuery for convenience (optional)
+    script(src="/scripts/main.js")  // Include your custom JS file (we'll add this in step 2)
+    style.
+      /* Add some basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      #todo-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        background-color: #fff;
+        margin: 5px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+  body
+    h1 To-Do List
+    form
+      input(type="text", id="task-input", placeholder="Enter a new task")
+      button(id="add-task-btn") Add Task
+
+    ul(id="todo-list")
+      each todo in todos
+        li #{todo.task} #{todo.completed}
+

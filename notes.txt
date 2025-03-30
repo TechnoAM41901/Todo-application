@@ -1,0 +1,51 @@
+
+Test the API using Postman, cURL, or a browser:
+
+GET /todos – Fetch all to-dos.
+POST /todos – Add a new to-do (send JSON in the request body).
+PUT /todos/:id – Mark a specific to-do as completed.
+DELETE /todos/:id – Delete a specific to-do.
+
+
+
+Testing the Changes:
+After applying these changes, you can test the routes:
+
+1. POST /todos (Add Todo):
+
+curl -X POST http://localhost:3000/todos -H "Content-Type: application/json" -d '{"task": "Buy groceries"}'
+
+If successful, you'll receive a 201 Created response with the new todo.
+
+If the task is missing:
+
+
+curl -X POST http://localhost:3000/todos -H "Content-Type: application/json" -d '{}'
+
+You'll receive a 400 Bad Request with the error {"error": "Task is required"}.
+
+
+
+
+2. GET /todos (Get All Todos):
+
+curl http://localhost:3000/todos
+If successful, you'll get a JSON array of all the todos.
+
+
+
+3. PUT /todos/:id (Complete Todo):
+
+curl -X PUT http://localhost:3000/todos/1
+
+If the id exists, the todo will be marked as completed. If it doesn’t, you'll get a 404 Not Found with the message {"error": "Todo not found"}.
+
+
+
+
+4. DELETE /todos/:id (Delete Todo):
+
+curl -X DELETE http://localhost:3000/todos/1
+
+
+If the id exists, the todo will be deleted. If not, you'll receive a 404 Not Found with the message {"error": "Todo not found"}.
